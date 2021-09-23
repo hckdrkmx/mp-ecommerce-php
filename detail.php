@@ -12,6 +12,9 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
 
+    <script src="https://www.mercadopago.com/v2/security.js" view="item"></script>
+
+
     <link rel="stylesheet" href="./assets/category-landing.css" media="screen, print">
 
     <link rel="stylesheet" href="./assets/category.css" media="screen, print">
@@ -130,7 +133,13 @@
                                             <?php echo "$" . $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                                    <form method="post" action="hckdrk/checkout.php">
+                                        <input type="hidden" name="price" value="<?=$_POST['price']?>">
+                                        <input type="hidden" name="title" value="<?=$_POST['title']?>">
+                                        <input type="hidden" name="img" value="<?=$_POST['img']?>">
+                                        <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                                    </form>
+                                    
                                 </div>
                             </div>
                         </div>
