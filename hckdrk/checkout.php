@@ -12,8 +12,8 @@ $preference->back_urls = array(
 );
 $preference->auto_return = "approved";
 
-//$preference->notification_url = 'https://hckdrkmx-mp-commerce-php.herokuapp.com/hckdrk/listener.php?source_news=webhooks';
-//$preference->external_reference = 'alfredo.joel.rojas@gmail.com';
+$preference->notification_url = 'https://hckdrkmx-mp-commerce-php.herokuapp.com/hckdrk/listener.php?source_news=webhooks';
+$preference->external_reference = 'alfredo.joel.rojas@gmail.com';
 
 $preference->payment_methods = array(
   "excluded_payment_methods" => array(
